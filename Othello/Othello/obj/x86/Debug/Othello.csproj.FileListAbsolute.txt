@@ -16,3 +16,12 @@ D:\Agile\Othello\Othello\obj\x86\Debug\Othello.Form1.resources
 D:\Agile\Othello\Othello\obj\x86\Debug\Othello.Properties.Resources.resources
 D:\Agile\Othello\Othello\obj\x86\Debug\GenerateResource.read.1.tlog
 D:\Agile\Othello\Othello\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\admin\Aguey-Agile\Othello\Othello\obj\x86\Debug\Othello.exe
+C:\Documents and Settings\admin\Aguey-Agile\Othello\Othello\obj\x86\Debug\Othello.pdb
+C:\Documents and Settings\admin\Aguey-Agile\Othello\Othello\bin\Debug\Othello.exe
+C:\Documents and Settings\admin\Aguey-Agile\Othello\Othello\bin\Debug\Othello.pdb
+C:\Documents and Settings\admin\Aguey-Agile\Othello\Othello\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\admin\Aguey-Agile\Othello\Othello\obj\x86\Debug\Othello.Form1.resources
+C:\Documents and Settings\admin\Aguey-Agile\Othello\Othello\obj\x86\Debug\Othello.Properties.Resources.resources
+C:\Documents and Settings\admin\Aguey-Agile\Othello\Othello\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\admin\Aguey-Agile\Othello\Othello\obj\x86\Debug\GenerateResource.write.1.tlog

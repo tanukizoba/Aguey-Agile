@@ -22,8 +22,9 @@ namespace Othello
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;         
-            Pen myPen = new Pen(Color.Brown,4);
+            Pen myPen = new Pen(Color.Orange,4);
 
+            
 
             g.DrawRectangle(myPen, 2, 2, 396, 396);
             g.DrawRectangle(myPen, 52, 2, 300, 396);
@@ -84,5 +85,9 @@ namespace Othello
             this.panelTable.Refresh();
             
         }
+
+        
+
+        
     }
 }
