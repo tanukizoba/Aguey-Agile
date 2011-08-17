@@ -62,9 +62,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(494, 39);
+            this.groupBox1.Location = new System.Drawing.Point(480, 39);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.Size = new System.Drawing.Size(214, 109);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Score";
@@ -243,6 +243,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(706, 519);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
@@ -264,6 +265,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.BtReset);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(714, 546);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Othello !";

@@ -20,12 +20,12 @@ namespace Othello
                     if (data[x, y] == 1)
                     {
                         myBrush.Color = Color.Black;
-                        g.FillEllipse(myBrush, x * 50 + 2, y * 50 + 2, 45, 45);
+                        g.FillEllipse(myBrush, x * 50 + 2, y * 50 + 2, 44, 44);
                     }
                     else if (data[x, y] == 0)
                     {
                         myBrush.Color = Color.WhiteSmoke;
-                        g.FillEllipse(myBrush, x * 50 + 2, y * 50 + 2, 45, 45);
+                        g.FillEllipse(myBrush, x * 50 + 2, y * 50 + 2, 44, 44);
                     }
 
                 }
