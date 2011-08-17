@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Othello", "Othello\Othello.csproj", "{D02B0885-B14E-4CD5-B2A9-3D6B3B1D2337}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D02B0885-B14E-4CD5-B2A9-3D6B3B1D2337}.Debug|x86.ActiveCfg = Debug|x86
+		{D02B0885-B14E-4CD5-B2A9-3D6B3B1D2337}.Debug|x86.Build.0 = Debug|x86
+		{D02B0885-B14E-4CD5-B2A9-3D6B3B1D2337}.Release|x86.ActiveCfg = Release|x86
+		{D02B0885-B14E-4CD5-B2A9-3D6B3B1D2337}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
