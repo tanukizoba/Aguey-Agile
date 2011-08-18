@@ -21,15 +21,36 @@ namespace Othello
         private void SingleButton_Click(object sender, EventArgs e)
         {
             othello.mode = 1;
-            othello.ShowDialog();
+            if (WhiteChk.Checked)
+            {
+                othello.TurnBlack = false;
+                othello.OpponentPiece = 1;
+                othello.FirstPlayer = true;
+                othello.ShowDialog();
+            }
+            else
+            {
+                othello.TurnBlack = false;
+                othello.FirstPlayer = false;
+                othello.OpponentPiece = 1;
+                othello.ShowDialog();
+            }
+           
+           
+
+           
         }
 
         private void TwoButton_Click(object sender, EventArgs e)
         {
+            othello.TurnBlack = false;
+            othello.FirstPlayer = false;
+            othello.OpponentPiece = 1;
             othello.mode = 2;
             othello.ShowDialog();
         }
 
+        
     
     }
 }

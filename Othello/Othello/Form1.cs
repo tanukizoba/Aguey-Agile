@@ -67,15 +67,21 @@ namespace Othello
                 Thread.Sleep(400);
                 TurnAI();
             }
-            
+
+            if (Playing.CountAvailableMove(AvailableMove) > 0)
+            {
+                BtPass.Enabled = false;
+            }
+            else
+            {
+                BtPass.Enabled = true;
+            }
            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            TurnBlack = false;
-         OpponentPiece = 1;
-         FirstPlayer = false;
+            
             for (int x = 0; x < 8; x++)
             {
                 for (int y = 0; y < 8; y++)
@@ -189,21 +195,14 @@ namespace Othello
                 Playing.WriteAvailable(AvailableMove, panelTable);
             }
 
-            if (Playing.CountAvailableMove(AvailableMove) > 0)
-            {
-                BtPass.Enabled = false;
-            }
-            else
-            {
-                BtPass.Enabled = true;
-            }
+           
             Playing.WritePiece(data, panelTable);
 
             UpdateScore();
         }
 
         private void BtReset_Click(object sender, EventArgs e)
-        {
+        {            
             TurnBlack = false;
             OpponentPiece = 1;
             Form1_Load(sender, e);
@@ -233,9 +232,10 @@ namespace Othello
         {
             TurnBlack = !TurnBlack;
             OpponentPiece = 1 - OpponentPiece;
+            AvailableMove = Playing.CheckAvailble(data, TurnBlack);
             if (checkBoxAvailableMove.Checked)
             {
-                AvailableMove = Playing.CheckAvailble(data, TurnBlack);
+                
                 Playing.WriteAvailable(AvailableMove, panelTable);
             }
             if (Playing.CountAvailableMove(AvailableMove) == 0)
@@ -277,9 +277,13 @@ namespace Othello
                 {
                     MessageBox.Show("White the winner!!!");
                 }
-                else
+                else if (score[0] < score[1])
                 {
                     MessageBox.Show("Black the winner!!!");
+                }
+                else
+                {
+                    MessageBox.Show("Draw!!!");
                 }
             }
         }
