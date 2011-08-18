@@ -47,6 +47,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.BtPass = new System.Windows.Forms.Button();
+            this.checkBoxAvailableMove = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // BtReset
@@ -239,12 +241,36 @@
             this.label16.TabIndex = 20;
             this.label16.Text = "H";
             // 
+            // BtPass
+            // 
+            this.BtPass.Enabled = false;
+            this.BtPass.Location = new System.Drawing.Point(151, 484);
+            this.BtPass.Name = "BtPass";
+            this.BtPass.Size = new System.Drawing.Size(75, 23);
+            this.BtPass.TabIndex = 22;
+            this.BtPass.Text = "Pass";
+            this.BtPass.UseVisualStyleBackColor = true;
+            this.BtPass.Click += new System.EventHandler(this.BtPass_Click);
+            // 
+            // checkBoxAvailableMove
+            // 
+            this.checkBoxAvailableMove.AutoSize = true;
+            this.checkBoxAvailableMove.Location = new System.Drawing.Point(264, 488);
+            this.checkBoxAvailableMove.Name = "checkBoxAvailableMove";
+            this.checkBoxAvailableMove.Size = new System.Drawing.Size(99, 17);
+            this.checkBoxAvailableMove.TabIndex = 21;
+            this.checkBoxAvailableMove.Text = "Available Move";
+            this.checkBoxAvailableMove.UseVisualStyleBackColor = true;
+            this.checkBoxAvailableMove.CheckedChanged += new System.EventHandler(this.checkBoxAvailableMove_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(706, 519);
+            this.Controls.Add(this.BtPass);
+            this.Controls.Add(this.checkBoxAvailableMove);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
@@ -296,6 +322,8 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button BtPass;
+        private System.Windows.Forms.CheckBox checkBoxAvailableMove;
     }
 }
 
