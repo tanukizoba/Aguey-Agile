@@ -73,6 +73,9 @@ namespace Othello
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            TurnBlack = false;
+         OpponentPiece = 1;
+         FirstPlayer = false;
             for (int x = 0; x < 8; x++)
             {
                 for (int y = 0; y < 8; y++)
