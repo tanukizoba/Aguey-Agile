@@ -34,6 +34,7 @@ namespace Othello
             myBrush.Dispose();
 
         }
+
         public static void WriteAvailable(int[,] data, System.Windows.Forms.Panel panel)
         {
             System.Drawing.Graphics g = panel.CreateGraphics();
@@ -187,9 +188,13 @@ namespace Othello
                     while (x >= 0 && y >= 0 && y < 8 && x < 8)
                     {
 
-                        if (data[x, y] == 1 - Opponent)
+                        if (data[x, y] == 1 - Opponent )
                         {
                             return true;
+                        }//ต้องรอแก้นะจ้ะ
+                        else if (data[x, y] == 3)
+                        {
+                            return false;
                         }
                         switch (direction)
                         {
@@ -337,10 +342,12 @@ namespace Othello
 
                         if (data[x, y] == 1 - Opponent)
                         {
-
                             ChangeColorHelper(data, Opponent, x, y, direction);
-
-
+                            return;
+                        }
+                        else if (data[x, y] == 3)
+                        {
+                            return;
                         }
                         switch (direction)
                         {
@@ -467,6 +474,31 @@ namespace Othello
                 }
             }
             return count;
+        }
+
+        public static int[] CountScore(int[,] data)
+        {
+            
+            int scoreWhite = 0;
+            int scoreBlack = 0;
+
+            for (int x = 0; x < 8; x++)
+            {
+                for (int y = 0; y < 8; y++)
+                {
+                    if (data[x, y] == 0)
+                    {
+                        scoreWhite++;
+                    }
+                    else if(data[x,y] == 1)
+                    {
+                        scoreBlack++;
+                    }
+                }
+            }
+            int[] score = { scoreWhite, scoreBlack };
+            return score;           
+
         }
 
 

@@ -34,3 +34,4 @@ C:\Documents and Settings\admin\Aguey-Agile2\Aguey-Agile\Othello\Othello\obj\x86
 C:\Documents and Settings\admin\Aguey-Agile2\Aguey-Agile\Othello\Othello\obj\x86\Debug\Othello.Properties.Resources.resources
 C:\Documents and Settings\admin\Aguey-Agile2\Aguey-Agile\Othello\Othello\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Documents and Settings\admin\Aguey-Agile2\Aguey-Agile\Othello\Othello\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\admin\Aguey-Agile2\Aguey-Agile\Othello\Othello\obj\x86\Debug\Othello.Player_mode.resources

@@ -30,6 +30,10 @@
         {
             this.BtReset = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbWhiteScore = new System.Windows.Forms.TextBox();
+            this.tbBlackScore = new System.Windows.Forms.TextBox();
+            this.labelBlack = new System.Windows.Forms.Label();
+            this.labelWhite = new System.Windows.Forms.Label();
             this.panelTable = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,6 +53,10 @@
             this.label16 = new System.Windows.Forms.Label();
             this.BtPass = new System.Windows.Forms.Button();
             this.checkBoxAvailableMove = new System.Windows.Forms.CheckBox();
+            this.gbTurn = new System.Windows.Forms.GroupBox();
+            this.labelTurn = new System.Windows.Forms.Label();
+            this.groupBox1.SuspendLayout();
+            this.gbTurn.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtReset
@@ -64,12 +72,54 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.tbWhiteScore);
+            this.groupBox1.Controls.Add(this.tbBlackScore);
+            this.groupBox1.Controls.Add(this.labelBlack);
+            this.groupBox1.Controls.Add(this.labelWhite);
             this.groupBox1.Location = new System.Drawing.Point(480, 39);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(214, 109);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Score";
+            // 
+            // tbWhiteScore
+            // 
+            this.tbWhiteScore.Enabled = false;
+            this.tbWhiteScore.Location = new System.Drawing.Point(121, 27);
+            this.tbWhiteScore.Name = "tbWhiteScore";
+            this.tbWhiteScore.Size = new System.Drawing.Size(61, 20);
+            this.tbWhiteScore.TabIndex = 23;
+            this.tbWhiteScore.Text = "2";
+            this.tbWhiteScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbBlackScore
+            // 
+            this.tbBlackScore.Enabled = false;
+            this.tbBlackScore.Location = new System.Drawing.Point(121, 70);
+            this.tbBlackScore.Name = "tbBlackScore";
+            this.tbBlackScore.Size = new System.Drawing.Size(61, 20);
+            this.tbBlackScore.TabIndex = 23;
+            this.tbBlackScore.Text = "2";
+            this.tbBlackScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // labelBlack
+            // 
+            this.labelBlack.AutoSize = true;
+            this.labelBlack.Location = new System.Drawing.Point(49, 73);
+            this.labelBlack.Name = "labelBlack";
+            this.labelBlack.Size = new System.Drawing.Size(34, 13);
+            this.labelBlack.TabIndex = 0;
+            this.labelBlack.Text = "Black";
+            // 
+            // labelWhite
+            // 
+            this.labelWhite.AutoSize = true;
+            this.labelWhite.Location = new System.Drawing.Point(49, 30);
+            this.labelWhite.Name = "labelWhite";
+            this.labelWhite.Size = new System.Drawing.Size(35, 13);
+            this.labelWhite.TabIndex = 0;
+            this.labelWhite.Text = "White";
             // 
             // panelTable
             // 
@@ -263,12 +313,33 @@
             this.checkBoxAvailableMove.UseVisualStyleBackColor = true;
             this.checkBoxAvailableMove.CheckedChanged += new System.EventHandler(this.checkBoxAvailableMove_CheckedChanged);
             // 
+            // gbTurn
+            // 
+            this.gbTurn.Controls.Add(this.labelTurn);
+            this.gbTurn.Location = new System.Drawing.Point(480, 197);
+            this.gbTurn.Name = "gbTurn";
+            this.gbTurn.Size = new System.Drawing.Size(214, 100);
+            this.gbTurn.TabIndex = 23;
+            this.gbTurn.TabStop = false;
+            this.gbTurn.Text = "Turn";
+            // 
+            // labelTurn
+            // 
+            this.labelTurn.AutoSize = true;
+            this.labelTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.labelTurn.Location = new System.Drawing.Point(49, 30);
+            this.labelTurn.Name = "labelTurn";
+            this.labelTurn.Size = new System.Drawing.Size(122, 46);
+            this.labelTurn.TabIndex = 0;
+            this.labelTurn.Text = "White";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(706, 519);
+            this.Controls.Add(this.gbTurn);
             this.Controls.Add(this.BtPass);
             this.Controls.Add(this.checkBoxAvailableMove);
             this.Controls.Add(this.label16);
@@ -296,6 +367,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Othello !";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.gbTurn.ResumeLayout(false);
+            this.gbTurn.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,6 +399,12 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button BtPass;
         private System.Windows.Forms.CheckBox checkBoxAvailableMove;
+        private System.Windows.Forms.TextBox tbBlackScore;
+        private System.Windows.Forms.Label labelBlack;
+        private System.Windows.Forms.Label labelWhite;
+        private System.Windows.Forms.TextBox tbWhiteScore;
+        private System.Windows.Forms.GroupBox gbTurn;
+        private System.Windows.Forms.Label labelTurn;
     }
 }
 
