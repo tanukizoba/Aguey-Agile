@@ -53,10 +53,10 @@ namespace Othello
                     data[x, y] = 3;
                 }
             }
-            data[6, 6] = 1;
-            data[7, 7] = 0;
-            data[6, 7] = 1;
-            data[7, 6] = 0;
+            data[4, 4] = 1;
+            data[3, 4] = 0;
+            data[3, 3] = 1;
+            data[4, 3] = 0;
         }
 
         private void panel1_MouseClick(object sender, MouseEventArgs e)
