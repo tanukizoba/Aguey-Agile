@@ -8,6 +8,15 @@ namespace Othello
 {
     class Playing
     {
+
+        static int lap;
+        public int getLap() 
+        {
+            return lap;
+        }
+
+
+
         public static void WritePiece(int[,] data, System.Windows.Forms.Panel panel)
         {
             System.Drawing.Graphics g = panel.CreateGraphics();
@@ -21,11 +30,13 @@ namespace Othello
                     {
                         myBrush.Color = Color.Black;
                         g.FillEllipse(myBrush, x * 50 + 2, y * 50 + 2, 45, 45);
+                        lap++;
                     }
                     else if (data[x, y] == 0)
                     {
                         myBrush.Color = Color.WhiteSmoke;
                         g.FillEllipse(myBrush, x * 50 + 2, y * 50 + 2, 45, 45);
+                        lap++;
                     }
 
                 }
