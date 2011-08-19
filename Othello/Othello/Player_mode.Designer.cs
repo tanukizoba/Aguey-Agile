@@ -70,6 +70,7 @@
             // WhiteChk
             // 
             this.WhiteChk.AutoSize = true;
+            this.WhiteChk.Checked = true;
             this.WhiteChk.Location = new System.Drawing.Point(19, 55);
             this.WhiteChk.Name = "WhiteChk";
             this.WhiteChk.Size = new System.Drawing.Size(53, 17);
@@ -77,7 +78,6 @@
             this.WhiteChk.TabStop = true;
             this.WhiteChk.Text = "White";
             this.WhiteChk.UseVisualStyleBackColor = true;
-           
             // 
             // BlackChk
             // 
@@ -86,7 +86,6 @@
             this.BlackChk.Name = "BlackChk";
             this.BlackChk.Size = new System.Drawing.Size(52, 17);
             this.BlackChk.TabIndex = 2;
-            this.BlackChk.TabStop = true;
             this.BlackChk.Text = "Black";
             this.BlackChk.UseVisualStyleBackColor = true;
             // 

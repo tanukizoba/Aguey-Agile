@@ -50,6 +50,8 @@ namespace Othello
             othello.ShowDialog();
         }
 
+     
+
         
     
     }

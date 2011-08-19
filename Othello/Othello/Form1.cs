@@ -45,9 +45,10 @@ namespace Othello
             g.DrawLine(myPen, 0, 200, 400, 200);
             myPen.Dispose();
 
+            AvailableMove = Playing.CheckAvailble(data, TurnBlack);
             if (checkBoxAvailableMove.Checked)
             {
-                AvailableMove = Playing.CheckAvailble(data, TurnBlack);
+                
                 Playing.WriteAvailable(AvailableMove, panelTable);
             }
             Playing.WritePiece(data, panelTable);
@@ -292,18 +293,22 @@ namespace Othello
         {
             AvailableMove = Playing.CheckAvailble(data, TurnBlack);
             List<int[]> CanMove = new List<int[]>();
-           
+            List<int[]> MoveEdge = new List<int[]>();
+            bool hasEdge = false;
 
             for (int x = 0; x < 8; x++)
             {
                 for (int y = 0; y < 8; y++)
                 {
                     if (AvailableMove[x, y] == 1)
-                    {
-                        int[] point = { x, y };
-                       
+                    { 
+                        int[] point = { x, y };                        
                         CanMove.Add(point);
-
+                        if (x == 0 || x == 7 || y == 0 || y == 7)
+                        {
+                            MoveEdge.Add(point);
+                            hasEdge = true;
+                        }
                     }
                 }
             }
@@ -312,9 +317,20 @@ namespace Othello
             {
                 int seed = DateTime.Now.TimeOfDay.Milliseconds;
                 Random rand = new Random(seed);
-                int move = rand.Next(0, CanMove.Count - 1);
+                int[] comMove = new int[2];
+                int move;
+                if (hasEdge)
+                {
+                    move = rand.Next(0, MoveEdge.Count);
+                    comMove = MoveEdge[move];
+                }
+                else
+                {
+                     move = rand.Next(0, CanMove.Count);
 
-                int[] comMove = CanMove[move];
+                     comMove = CanMove[move];
+                }
+                
 
                 if (TurnBlack && FirstPlayer)
                 {
@@ -338,6 +354,6 @@ namespace Othello
                 }
                 PrintPiece();
             }
-        }
+        }       
     }
 }
