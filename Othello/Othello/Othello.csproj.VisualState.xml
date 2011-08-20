@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1000]C:\Users\TanukiZoba\Aguey-Agile\Othello\Othello\Othello.csproj</TopNode>
+  <SelectedNode>[0-1003]Othello.TestOthello.Test_table_2</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1000]C:\Users\TanukiZoba\Aguey-Agile\Othello\Othello\Othello.csproj" Expanded="true" />
+    <Node UniqueName="[0-1009]C:\Users\TanukiZoba\Aguey-Agile\Othello\Othello\bin\Debug\Othello.exe" Expanded="true" />
+    <Node UniqueName="[0-1010]Othello" Expanded="true" />
+    <Node UniqueName="[0-1001]Othello.TestOthello" Expanded="true" />
+  </Nodes>
+</VisualState>

@@ -9,13 +9,6 @@ namespace Othello
     class Playing
     {
 
-        static int lap;
-        public int getLap() 
-        {
-            return lap;
-        }
-
-
 
         public static void WritePiece(int[,] data, System.Windows.Forms.Panel panel)
         {
@@ -30,13 +23,13 @@ namespace Othello
                     {
                         myBrush.Color = Color.Black;
                         g.FillEllipse(myBrush, x * 50 + 2, y * 50 + 2, 45, 45);
-                        lap++;
+
                     }
                     else if (data[x, y] == 0)
                     {
                         myBrush.Color = Color.WhiteSmoke;
                         g.FillEllipse(myBrush, x * 50 + 2, y * 50 + 2, 45, 45);
-                        lap++;
+
                     }
 
                 }
@@ -148,16 +141,7 @@ namespace Othello
 
         }
 
-        /*  public static int[,] FindAvailable(int[,] data,int Opponent,int x,int y)
-          {
 
-              if (data[x - 1, y - 1] == Opponent)
-              {
-                  FindAvailableHelper(data,Opponent,x-1,y-1,8);
-              }
-            
-
-          }*/
 
         public static bool FindAvailable(int[,] data, int Opponent, int x, int y, int direction)
         {
@@ -199,7 +183,7 @@ namespace Othello
                     while (x >= 0 && y >= 0 && y < 8 && x < 8)
                     {
 
-                        if (data[x, y] == 1 - Opponent )
+                        if (data[x, y] == 1 - Opponent)
                         {
                             return true;
                         }//ต้องรอแก้นะจ้ะ
@@ -264,23 +248,7 @@ namespace Othello
 
             PossibleMove = FindPossibleMove(data, OpponentPiece);
 
-            /*    for (int x = 0; x < 8; x++)
-                {
-                    for (int y = 0; y < 8; y++)
-                    {
-                        if (PossibleMove[x, y])
-                        {
-                            AvailableMove[x, y] = 1;
 
-                        }
-                        else
-                        {
-                            AvailableMove[x, y] = 0;
-                        }
-                    }
-
-                }
-                return AvailableMove;*/
 
 
             for (int x = 0; x < 8; x++)
@@ -489,7 +457,7 @@ namespace Othello
 
         public static int[] CountScore(int[,] data)
         {
-            
+
             int scoreWhite = 0;
             int scoreBlack = 0;
 
@@ -501,14 +469,14 @@ namespace Othello
                     {
                         scoreWhite++;
                     }
-                    else if(data[x,y] == 1)
+                    else if (data[x, y] == 1)
                     {
                         scoreBlack++;
                     }
                 }
             }
             int[] score = { scoreWhite, scoreBlack };
-            return score;           
+            return score;
 
         }
 

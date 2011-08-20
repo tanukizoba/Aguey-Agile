@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Users\TanukiZoba\Aguey-Agile\Othello\Othello\Othello.csproj" total="7" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2011-08-21" time="00:14:42">
+  <environment nunit-version="2.5.10.11092" clr-version="2.0.50727.4927" os-version="Microsoft Windows NT 6.1.7600.0" platform="Win32NT" cwd="C:\Users\TanukiZoba\Aguey-Agile\Othello\Othello" machine-name="TANUKIZOBA-PC" user="TanukiZoba" user-domain="TanukiZoba-PC" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="Project" name="C:\Users\TanukiZoba\Aguey-Agile\Othello\Othello\Othello.csproj" executed="True" result="Success" success="True" time="0.434" asserts="0">
+    <results>
+      <test-suite type="Assembly" name="C:\Users\TanukiZoba\Aguey-Agile\Othello\Othello\bin\Debug\Othello.exe" executed="True" result="Success" success="True" time="0.427" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="Othello" executed="True" result="Success" success="True" time="0.427" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="TestOthello" executed="True" result="Success" success="True" time="0.425" asserts="0">
+                <results>
+                  <test-case name="Othello.TestOthello.Test_AvailableMove" executed="True" result="Success" success="True" time="0.017" asserts="12" />
+                  <test-case name="Othello.TestOthello.Test_AvailableMove_2" executed="True" result="Success" success="True" time="0.017" asserts="12" />
+                  <test-case name="Othello.TestOthello.Test_Load" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                  <test-case name="Othello.TestOthello.Test_Score" executed="True" result="Success" success="True" time="0.001" asserts="2" />
+                  <test-case name="Othello.TestOthello.Test_Score_2" executed="True" result="Success" success="True" time="0.002" asserts="2" />
+                  <test-case name="Othello.TestOthello.Test_table" executed="True" result="Success" success="True" time="0.002" asserts="6" />
+                  <test-case name="Othello.TestOthello.Test_table_2" executed="True" result="Success" success="True" time="0.001" asserts="6" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

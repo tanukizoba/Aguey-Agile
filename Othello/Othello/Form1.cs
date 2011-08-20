@@ -24,6 +24,7 @@ namespace Othello
         public bool TurnBlack = false;
         public int OpponentPiece = 1;
         public bool FirstPlayer = false;
+        public int[] score;
 
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -48,7 +49,7 @@ namespace Othello
             AvailableMove = Playing.CheckAvailble(data, TurnBlack);
             if (checkBoxAvailableMove.Checked)
             {
-                
+
                 Playing.WriteAvailable(AvailableMove, panelTable);
             }
             Playing.WritePiece(data, panelTable);
@@ -62,8 +63,8 @@ namespace Othello
                 labelTurn.Text = "White";
             }
 
-            
-            if ((TurnBlack && FirstPlayer || !TurnBlack && !FirstPlayer) && mode ==1)
+
+            if ((TurnBlack && FirstPlayer || !TurnBlack && !FirstPlayer) && mode == 1)
             {
                 Thread.Sleep(400);
                 TurnAI();
@@ -77,12 +78,12 @@ namespace Othello
             {
                 BtPass.Enabled = true;
             }
-           
+
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public void Form1_Load(object sender, EventArgs e)
         {
-            
+
             for (int x = 0; x < 8; x++)
             {
                 for (int y = 0; y < 8; y++)
@@ -98,7 +99,7 @@ namespace Othello
             data[4, 4] = 0;
             data[3, 4] = 1;
             data[4, 3] = 1;
-         
+
             UpdateScore();
 
         }
@@ -108,6 +109,13 @@ namespace Othello
             int x = e.X / 50;
             int y = e.Y / 50;
 
+            Click_table(x, y);
+
+            CheckWin();
+        }
+
+        public void Click_table(int x, int y)
+        {
             AvailableMove = Playing.CheckAvailble(data, TurnBlack);
             if (mode == 2)
             {
@@ -149,9 +157,9 @@ namespace Othello
                         }
                         TurnBlack = false;
                         OpponentPiece = 1;
-                        
 
-                       
+
+
                     }
                 }
                 else if (!TurnBlack && FirstPlayer)
@@ -165,45 +173,35 @@ namespace Othello
                         }
                         TurnBlack = true;
                         OpponentPiece = 0;
-                        
-                       
 
-                        
+
+
+
                     }
-                }         
+                }
             }
 
             PrintPiece();
-           
-            
-            if(mode ==1)
-            { 
+
+
+            if (mode == 1)
+            {
                 Thread.Sleep(500);
                 TurnAI();
             }
 
-            CheckWin();
-           
+
         }
 
         private void PrintPiece()
         {
-           panelTable.Refresh();
-         
-            if (checkBoxAvailableMove.Checked)
-            {
-                AvailableMove = Playing.CheckAvailble(data, TurnBlack);
-                Playing.WriteAvailable(AvailableMove, panelTable);
-            }
-
-           
+            panelTable.Refresh();
             Playing.WritePiece(data, panelTable);
-
             UpdateScore();
         }
 
         private void BtReset_Click(object sender, EventArgs e)
-        {            
+        {
             TurnBlack = false;
             OpponentPiece = 1;
             Form1_Load(sender, e);
@@ -217,16 +215,7 @@ namespace Othello
 
         private void checkBoxAvailableMove_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBoxAvailableMove.Checked)
-            {
-                AvailableMove = Playing.CheckAvailble(data, TurnBlack);
-                Playing.WriteAvailable(AvailableMove, panelTable);
-            }
-            else
-            {
-                panelTable.Refresh();
-
-            }
+            panelTable.Refresh();
         }
 
         private void BtPass_Click(object sender, EventArgs e)
@@ -236,19 +225,23 @@ namespace Othello
             AvailableMove = Playing.CheckAvailble(data, TurnBlack);
             if (checkBoxAvailableMove.Checked)
             {
-                
+
                 Playing.WriteAvailable(AvailableMove, panelTable);
             }
             if (Playing.CountAvailableMove(AvailableMove) == 0)
             {
-                int[] score = Playing.CountScore(data);
+                score = Playing.CountScore(data);
                 if (score[0] > score[1])
                 {
                     MessageBox.Show("White the winner!!!");
                 }
-                else
+                else if (score[0] < score[1])
                 {
                     MessageBox.Show("Black the winner!!!");
+                }
+                else
+                {
+                    MessageBox.Show("Draw!!!");
                 }
             }
             BtPass.Enabled = false;
@@ -262,16 +255,16 @@ namespace Othello
             }
         }
 
-        private void UpdateScore()
+        public void UpdateScore()
         {
-            int[] score = Playing.CountScore(data);
+            score = Playing.CountScore(data);
             tbWhiteScore.Text = score[0].ToString();
-            tbBlackScore.Text = score[1].ToString();         
+            tbBlackScore.Text = score[1].ToString();
         }
 
-        private void CheckWin()
+        public void CheckWin()
         {
-            int[] score = Playing.CountScore(data);
+            score = Playing.CountScore(data);
             if (score[0] + score[1] == 64)
             {
                 if (score[0] > score[1])
@@ -301,8 +294,8 @@ namespace Othello
                 for (int y = 0; y < 8; y++)
                 {
                     if (AvailableMove[x, y] == 1)
-                    { 
-                        int[] point = { x, y };                        
+                    {
+                        int[] point = { x, y };
                         CanMove.Add(point);
                         if (x == 0 || x == 7 || y == 0 || y == 7)
                         {
@@ -326,11 +319,11 @@ namespace Othello
                 }
                 else
                 {
-                     move = rand.Next(0, CanMove.Count);
+                    move = rand.Next(0, CanMove.Count);
 
-                     comMove = CanMove[move];
+                    comMove = CanMove[move];
                 }
-                
+
 
                 if (TurnBlack && FirstPlayer)
                 {
@@ -342,7 +335,7 @@ namespace Othello
                     TurnBlack = false;
                     OpponentPiece = 1;
                 }
-                else if(!TurnBlack && !FirstPlayer)
+                else if (!TurnBlack && !FirstPlayer)
                 {
                     data[comMove[0], comMove[1]] = 0;
                     for (int i = 1; i < 9; i++)
@@ -354,6 +347,6 @@ namespace Othello
                 }
                 PrintPiece();
             }
-        }       
+        }
     }
 }
